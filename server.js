@@ -38,7 +38,10 @@ app.post('/api/notes', (req, res) => {
   // API route => DELETE note by ID 
   app.delete('/api/notes/:id', (req, res) => {
   let note = noteJSON.find( ({ id }) => id === JSON.parse(req.params.id));
-  // removes object at index of note id
+ // removes object at index of note id
   noteJSON.splice( noteJSON.indexOf(note), 1);
   res.end("Note deleted");
   });
+
+
+ 
